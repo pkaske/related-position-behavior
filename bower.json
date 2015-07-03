@@ -1,6 +1,6 @@
 {
   "name": "related-position-behavior",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "Peter Kaske <p.kaske@gmail.com>"
   ],
@@ -9,11 +9,7 @@
     "web-component",
     "web-components",
     "polymer",
-    "i18n",
-    "i10n",
-    "localization",
-    "internationalization",
-    "translation"
+    "behavior"
   ],
   "main": "related-position-behavior.html",
   "license": "MIT",
