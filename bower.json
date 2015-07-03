@@ -1,0 +1,28 @@
+{
+  "name": "related-position-behavior",
+  "version": "1.0.0",
+  "authors": [
+    "Peter Kaske <p.kaske@gmail.com>"
+  ],
+  "description": "Polymer behavior to position one element relatively to another element.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "i18n",
+    "i10n",
+    "localization",
+    "internationalization",
+    "translation"
+  ],
+  "main": "related-position-behavior.html",
+  "license": "MIT",
+  "homepage": "https://github.com/pkaske/related-position-behavior/",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}
