@@ -1,12 +1,12 @@
 # related-position-behavior
-Polymer behavior to position one element relatively to another element.
+Polymer behavior to position one element relative to another element.
 
 ## Properties
 
 |Name                | Decription                                                |
 |--------------------|-----------------------------------------------------------|
-|halign              | Horizontal alignment of the subject relative to the target|
-|valign              | Vertical alignment of the subject relative to the target  |
+|halign              | Horizontal alignment of the target relative to the host   |
+|valign              | Vertical alignment of the target relative to the host     |
 |spacing             | Additional spacing between the subject and the target     |
 
 ## Attributes
