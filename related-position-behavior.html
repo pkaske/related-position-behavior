@@ -26,6 +26,11 @@
         value: 'bottom'
       },
 
+      forceAlign: {
+        type: Boolean,
+        value: false
+      },
+
       /**
        * Additional spacing between the target and the host
        */
@@ -70,13 +75,13 @@
       if (this.halign === 'right') {
         left = (this.spacing.left || 0) + padding.left;
 
-        if (ref.left + tarRec.width > window.innerWidth) {
+        if (ref.left + tarRec.width > window.innerWidth && !this.forceAlign) {
           left = 0 - tarRec.width + ref.width - (this.spacing.right || 0) - padding.right;
         }
       } else if (this.halign === 'left') {
         left = 0 - tarRec.width + ref.width - (this.spacing.right || 0) - padding.right;
 
-        if (ref.right - tarRec.width < 0) {
+        if (ref.right - tarRec.width < 0 && !this.forceAlign) {
           left = (this.spacing.left || 0) + padding.left;
         }
       }
@@ -85,7 +90,7 @@
         // Calc top coordinate of the target
         top = 0 - tarRec.height - (this.spacing.top || 0) + padding.top;
         // Check if the new coordinate would reach outside the window.
-        if (top + tarRec.top < 0) {
+        if (top + tarRec.top < 0 && !this.forceAlign) {
           // Reaches outside, switch to down
           top = ref.height + (this.spacing.bottom || 0) - padding.bottom;
         }
@@ -93,7 +98,7 @@
         top = ref.height + (this.spacing.bottom || 0) - padding.bottom;
 
         // Check if the target would reach outside the bottom border of the window.
-        if (top + tarRec.height + ref.bottom > window.innerHeight) {
+        if (top + tarRec.height + ref.bottom > window.innerHeight && !this.forceAlign) {
           var altTop = 0 - tarRec.height - (this.spacing.top || 0) + padding.top;
           // Check if the alternative coordinate doesn't make the target reach ouside the top border of the window.
           // In the end, we prefer the bottom alignment over top alignment to keep the content reachable for the user.
